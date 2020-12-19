@@ -1,0 +1,18 @@
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-flex {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-flex > li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.gallery-flex > li {
+  list-style: none;
+}
