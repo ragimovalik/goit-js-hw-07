@@ -32,7 +32,7 @@ const images = [
 ];
 
 const imagesEl = document.querySelector("#gallery");
-imagesEl.classList.add('gallery-flex')
+imagesEl.classList.add("gallery-flex");
 
 const imagesAdder = (array) =>
   array.forEach((image) => {
