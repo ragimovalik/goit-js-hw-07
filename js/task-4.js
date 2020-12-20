@@ -17,8 +17,8 @@ Mentor:
 const counterValueEl = document.querySelector("#value");
 let counterValue = 0;
 
-const increment = () => counterValueEl.textContent = ++counterValue;
-const decrement = () => counterValueEl.textContent = --counterValue;
+const increment = () => (counterValueEl.textContent = ++counterValue);
+const decrement = () => (counterValueEl.textContent = --counterValue);
 
 const incrementBtn = document.querySelector('button[data-action="increment"]');
 const decrementBtn = document.querySelector('button[data-action="decrement"]');
