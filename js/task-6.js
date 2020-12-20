@@ -24,7 +24,12 @@
 
 #validation-input.invalid {
   border-color: #f44336;
-}*/
+}
+// ----------------------------
+Mentor:
+В таске 6 прежде чем добавить класс нужно убрать противоположный 
+класс иначе ваш функционал отрабатывает верно только один раз
+*/
 
 const inputEl = document.querySelector("#validation-input");
 const inputTextLength = inputEl.getAttribute("data-length");
@@ -36,6 +41,6 @@ inputEl.addEventListener("blur", (event) => {
   const inputedText = event.target.value;
 
   inputedText.length === Number(inputTextLength)
-    ? inputEl.classList.add("valid")
-    : inputEl.classList.add("invalid");
+    ? inputEl.classList.add("valid") || inputEl.classList.remove("invalid")
+    : inputEl.classList.add("invalid") || inputEl.classList.remove("valid");
 });
