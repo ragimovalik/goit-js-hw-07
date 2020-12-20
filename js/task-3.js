@@ -34,6 +34,7 @@ const images = [
 const imagesEl = document.querySelector("#gallery");
 imagesEl.classList.add("gallery-flex");
 
+/*
 const imagesAdder = (array) =>
   array.forEach((image) => {
     imagesEl.insertAdjacentHTML(
@@ -42,4 +43,16 @@ const imagesAdder = (array) =>
     );
   });
 
+*/
+
+const imagesAdder = (array) => {
+  const arr = array.map(
+    (image) => `<li><img alt='${image.alt}' src=${image.url}></li>`
+  );
+
+  return imagesEl.insertAdjacentHTML("afterbegin", arr);
+};
+
 imagesAdder(images);
+
+

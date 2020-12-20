@@ -11,11 +11,6 @@
 const inputEl = document.querySelector("#name-input");
 const outputEl = document.querySelector("#name-output");
 
-console.log(inputEl.textContent);
-console.log(outputEl.textContent);
-
-console.log(
   inputEl.addEventListener("input", (event) => {
     outputEl.textContent = event.target.value || "незнакомец";
-  })
-);
+  });
