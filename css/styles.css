@@ -16,3 +16,15 @@ img {
 .gallery-flex > li {
   list-style: none;
 }
+
+.validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+.valid {
+  border-color: #4caf50;
+}
+
+.invalid {
+  border-color: #f44336;
+}
