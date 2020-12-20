@@ -8,12 +8,17 @@
 значения счетчика
 Добавь слушатели кликов на кнопки, вызовы функций и обновление 
 интерфейса
+// ----------------------
+Mentor: 
+В таске 4 в переменной counterValue нужно хранить значение 
+счетчика, а не ссылку на элемент ДОМ дерева.
  */
 
-const counterValue = document.querySelector("#value");
+const counterValueEl = document.querySelector("#value");
+let counterValue = 0;
 
-const increment = () => ++counterValue.textContent;
-const decrement = () => --counterValue.textContent;
+const increment = () => counterValueEl.textContent = ++counterValue;
+const decrement = () => counterValueEl.textContent = --counterValue;
 
 const incrementBtn = document.querySelector('button[data-action="increment"]');
 const decrementBtn = document.querySelector('button[data-action="decrement"]');
