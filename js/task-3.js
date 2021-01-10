@@ -49,10 +49,18 @@ const imagesAdder = (array) => {
   const arr = array.map(
     (image) => `<li><img alt='${image.alt}' src=${image.url}></li>`
   );
-
-  return imagesEl.insertAdjacentHTML("afterbegin", arr);
+  return imagesEl.insertAdjacentHTML("afterbegin", arr.join(''));
 };
 
+// const imagesAdder = (array) => {
+//   array
+//     // .map((image) => `<li><img alt='${image.alt}' src=${image.url}></li>`)
+//     .map((image) =>
+//       imagesEl.insertAdjacentHTML(
+//         "afterbegin",
+//         `<li><img alt='${image.alt}' src=${image.url}></li>`
+//       )
+//     );
+// };
+
 imagesAdder(images);
-
-
